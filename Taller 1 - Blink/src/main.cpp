@@ -1,16 +1,33 @@
+/**
+ * @file main.cpp
+ * @author Manuel Fernando Galindo Semanate (manuelgalindo@unicauca.edu.co)
+ * @brief Control de LED pulsante
+ * @version 0.1
+ * @date 2021-04-15
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
+
 #include <Arduino.h>
 
-#define PERIOD 200
+#define PERIOD 200    // Periodo del LED
+
+/** - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/** Funciones */
+/** - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+
+void toggleLed(){
+  digitalWrite(LED_BUILTIN, !digitalRead(LED_BUILTIN));
+  delay(PERIOD);  
+}
+
+/** - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 
 void setup() {
-  // initialize digital pin LED_BUILTIN as an output.
   pinMode(LED_BUILTIN, OUTPUT);
 }
 
-// the loop function runs over and over again forever
 void loop() {
-  digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(PERIOD);                       // wait for a second
-  digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
-  delay(PERIOD);                       // wait for a second
+  toggleLed(); 
 }

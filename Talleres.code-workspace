@@ -9,5 +9,9 @@
 			"path": "Taller 2 - Potenciometro Led"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"files.associations": {
+			"functional": "cpp"
+		}
+	}
 }
