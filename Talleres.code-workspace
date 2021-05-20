@@ -10,6 +10,9 @@
 		},
 		{
 			"path": "Taller 3 - Conectar a internet"
+		},
+		{
+			"path": "Taller 4 - MQTT"
 		}
 	],
 	"settings": {
